@@ -1,6 +1,7 @@
 export default function Modelo() {
   return (
-    <section className="contenido">
+    <main className="main-container">
+      <section className="contenido">
       <h1>Modelo de Negocio</h1>
       <div className="modelo-grid">
         <div className="modelo-card fade-in">
@@ -17,5 +18,6 @@ export default function Modelo() {
         </div>
       </div>
     </section>
+    </main>
   );
 }

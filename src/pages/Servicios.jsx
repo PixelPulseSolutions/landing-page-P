@@ -1,6 +1,7 @@
 export default function Servicios() {
   return (
-    <section id="servicios" className="servicios fade-in">
+    <main className="main-container">
+      <section id="servicios" className="servicios fade-in">
   <div className="contenido">
     <h1>Servicios Inteligentes para tu Negocio</h1>
     <div className="servicios-grid">
@@ -63,6 +64,7 @@ export default function Servicios() {
     </div>
   </div>
 </section>
+    </main>
 
   );
 }

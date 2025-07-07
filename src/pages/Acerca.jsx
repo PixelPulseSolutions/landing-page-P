@@ -1,6 +1,7 @@
 export default function Acerca() {
   return (
-    <section className="contenido">
+    <main className="main-container">
+      <section className="contenido">
       <h1>Sobre Nosotros</h1>
       <div className="about-card fade-in">
         <p>
@@ -14,5 +15,6 @@ export default function Acerca() {
         </p>
       </div>
     </section>
+    </main>
   );
 }

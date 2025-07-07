@@ -1,8 +1,12 @@
 import hero from '../assets/hero.png';
+import av1 from '../assets/avatar1.png';
+import av2 from '../assets/avatar2.png';
+import av3 from '../assets/avatar3.png';
 export default function Home() {
   return (
     <>
-    <header className="hero fade-in">
+      <main className='main-container'>
+        <header className="hero fade-in">
       <div className="hero-text">
         <h1><span className="highlight">Automatización</span> & <span className="highlight">IA</span><br/>
           para negocios inteligentes
@@ -22,22 +26,23 @@ export default function Home() {
       <h2>Lo que opinan nuestros clientes</h2>
       <div className="testimonio-cards">
         <div className="testimonio-card">
-            <img className="testimonio-avatar" src="/avatar1.png" alt="Mariana G." />
+            <img className="testimonio-avatar" src={av1} alt="Mariana G." />
           <p>"Gracias a PixelPulse hemos automatizado tareas que nos tomaban horas. Su agente de IA responde mejor que algunos empleados 😅."</p>
           <strong>- Mariana G., Dueña de tienda en línea</strong>
         </div>
         <div className="testimonio-card">
-            <img className="testimonio-avatar" src="/avatar1.png" alt="Mariana G." />
+            <img className="testimonio-avatar" src={av2} alt="Mariana G." />
           <p>"Sus reportes automáticos son oro puro. Nos llegan al WhatsApp cada lunes sin tener que hacer nada."</p>
           <strong>- Juan P., Gerente de operaciones</strong>
         </div>
         <div className="testimonio-card">
-            <img className="testimonio-avatar" src="/avatar1.png" alt="Mariana G." />
+            <img className="testimonio-avatar" src={av3} alt="Mariana G." />
           <p>"No sabía que necesitaba un chatbot hasta que lo vi funcionando con mis clientes. ¡Lo recomiendo!"</p>
           <strong>- Arturo L., Coach personal</strong>
         </div>
       </div>
         </section>
+      </main>
     </>
   );
 }

@@ -13,7 +13,7 @@ export default function Footer() {
           <h4>Contacto</h4>
           <ul>
             <li>📍 Aguascalientes, Aguascalientes, México</li>
-            <li>📞 +52 81 1234 5678</li>
+            <li>📞 +52 449 110 0507</li>
             <li>✉️ pixelpulsesolutions16@gmail.com</li>
           </ul>
         </div>

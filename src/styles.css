@@ -88,8 +88,8 @@ main, .main-container, .page-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center; /* ya estaba bien */
-  padding: 3rem 2rem;  /* menos vertical para no recortar */
+  align-items: center;
+  padding: 3rem 2rem;
   background: linear-gradient(135deg, #f8f9ff 0%, #e0ecff 100%);
 }
 
@@ -166,9 +166,9 @@ main, .main-container, .page-wrapper {
 .hero-image img {
   max-width: 100%;
   height: auto;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   border-radius: 20px;
-  display: block; /* evita margenes extras */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: block;
 }
 
 /* Secciones generales */
@@ -370,9 +370,11 @@ main, .main-container, .page-wrapper {
 /* Responsive */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
   }
 
   .nav-logo {
@@ -403,8 +405,9 @@ main, .main-container, .page-wrapper {
   }
 
   .hero-buttons {
-    flex-direction: column;
-    align-items: center;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
   }
 
   .hero-buttons .boton {
@@ -486,6 +489,11 @@ main, .main-container, .page-wrapper {
 
   .hero-text {
     padding-right: 0;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero-buttons .boton {
@@ -712,4 +720,24 @@ main, .main-container, .page-wrapper {
 
 .boton.descargar:hover {
   background-color: #002e5f;
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-icon {
+  width: 40px;
+  height: 40px;
 }

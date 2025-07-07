@@ -1,25 +1,44 @@
-export default function Contacto() {
+import { useState } from 'react';
+
+function Contacto() {
+  const [nombre, setNombre] = useState('');
+  const [correo, setCorreo] = useState('');
+  const [mensaje, setMensaje] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const texto = `Hola, soy ${nombre}. Mi correo es ${correo}. ${mensaje}`;
+    const url = `https://wa.me/524491100507?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, '_blank'); // Abre WhatsApp en nueva pestaña
+  };
+
   return (
-    <section className="contenido">
-      <h1>Contáctanos</h1>
-      <div className="contact-wrapper fade-in">
-        <div className="contact-info">
-          <p><i className="fas fa-envelope"></i> pixelpulsesolutions16@gmail.com</p>
-          <p><i className="fab fa-whatsapp"></i> +52 449 110 0507</p>
-        </div>
-        <form
-          className="contact-form"
-          onSubmit={(e) => {
-            e.preventDefault();
-            alert("Mensaje enviado (demo)!");
-          }}
-        >
-          <input type="text" placeholder="Tu nombre" required />
-          <input type="email" placeholder="Correo electrónico" required />
-          <textarea placeholder="Tu mensaje" rows="5" required></textarea>
-          <button type="submit">Enviar mensaje</button>
-        </form>
-      </div>
-    </section>
+    <form className="contact-form" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        placeholder="Tu nombre"
+        value={nombre}
+        onChange={(e) => setNombre(e.target.value)}
+        required
+      />
+      <input
+        type="email"
+        placeholder="Tu correo"
+        value={correo}
+        onChange={(e) => setCorreo(e.target.value)}
+        required
+      />
+      <textarea
+        placeholder="Tu mensaje"
+        value={mensaje}
+        onChange={(e) => setMensaje(e.target.value)}
+        required
+      />
+      <button type="submit">Enviar por WhatsApp</button>
+    </form>
   );
 }
+
+export default Contacto;
